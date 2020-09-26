@@ -1,3 +1,76 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.color{
+	color: #000;
+}
+.underline{
+	text-decoration: underline;
+}
+.color-red{
+	color: red;
+	padding-left: 20px;
+	list-style: none;
+}
+#error_explanation{
+	border: solid 1px red;
+}
+.error_count{
+	color: #fff;
+	background-color: red;
+}
+
+.main{
+	margin: 30px;
+	h2{
+	    color: #000;
+	    margin-bottom: 20px;
+	}
+	.top-text{
+	    color: #000;
+	    font-size: 12px;
+	    margin-left: 40px;
+	    margin-bottom: 20px;
+	}
+	span{
+	    color: #000;
+	    font-size: 16px;
+	    font-weight: bold;
+	}
+}
+
+table{
+	margin-bottom: 20px;
+}
+.table-row{
+	text-aling: center;
+}
+.table-headline{
+	color: #000;
+}
+.table-data{
+	color: #000;
+	padding-right: 10px;
+	padding-bottom: 5px;
+}
+
+.show-text{
+	color: #000;
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+.show-text p{
+	display: inline-block;
+	font-weight: bold;
+}
+
+.edit-content{
+	margin-bottom: 5px;
+}
+.edit-text{
+    color: #000;
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+}

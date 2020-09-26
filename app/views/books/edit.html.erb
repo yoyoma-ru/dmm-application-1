@@ -1,15 +1,27 @@
-<h2>Editing Book</h2>
+<div class="main">
+	<h2>Editing Book</h2>
+	<% if @book.errors.any? %>
+		    <div id="error_explanation">
+		        <p class="error_count"><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</p>
+		        <ul>
+		        	<% @book.errors.full_messages.each do |message| %>
+		        		 <li class="color-red">・<%= message %></li>
+		        	<% end %>
+		        </ul>
+		    </div>
+		<% end %>
+	<%= form_for(@book) do |f| %>
+    	<div class="edit-content">
+    		<%= f.label :title, "Title", class: "edit-text" %>
+    		<%= f.text_field :title, class: "color" %>
+    	</div>
+    	<div class="edit-content">
+    		<%= f.label :body, "Body", class: "edit-text" %>
+    		<%= f.text_area :body, class: "color" %>
+    	</div>
+    	<%= f.submit "Update Book", class: "color edit-content" %>
+	<% end %>
 
-<%= form_for(@book) do |f| %>
-    <div class="">
-    	<p><%= f.label :title, "Title" %></p>
-    	<%= f.text_field :title %>
-    </div>
-    <div class="">
-    	<p><%= f.label :body, "Body" %></p>
-    	<%= f.text_area :body %>
-    </div>
-    <%= f.submit "Update Book" %>
-<% end %>
+	<%= link_to "Show", book_path(@book), class: "color underline" %> | <%= link_to "Back", books_path, class: "color underline" %>
 
-<%= link_to "Show", book_path(@book) %> | <%= link_to "Back", books_path %>
+</div>

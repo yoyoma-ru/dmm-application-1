@@ -1,10 +1,12 @@
-<div class="">
-	<span class="">Title:</span>
-	<%= @book.title %>
-</div>
-<div class="">
-	<span class="">Body:</span>
-	<%= @book.body %>
-</div>
+<div class="main">
+    <div class="show-text">
+	    <p class="color">Title:</p>
+	    <%= @book.title %>
+    </div>
+    <div class="show-text">
+	    <p class="color">Body:</p>
+	    <%= @book.body %>
+    </div>
 
-<%= link_to "Edit", edit_book_path(@book) %> | <%= link_to "Back", books_path %>
+    <%= link_to "Edit", edit_book_path(@book), class: "color underline" %> | <%= link_to "Back", books_path, class: "color underline" %>
+</div>
